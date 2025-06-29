@@ -76,7 +76,7 @@ class DualTurbine:
 
 # --- Vibergy computation -----------------------------------------------------
 
-def computeVibergy(waveform: List[float], fs: int, mass: float = 0.010) -> float:
+def vibergy(waveform: List[float], fs: int, mass: float = 0.010) -> float:
     """Return energy in joules from a vibration sample."""
     if not waveform:
         return 0.0
@@ -114,5 +114,5 @@ if __name__ == "__main__":
     tStep = 1 / fs
     t = [i * tStep for i in range(int(dur * fs))]
     tap = [0.1 * math.sin(2 * math.pi * 2000 * ti) for ti in t]
-    energy = computeVibergy(tap, fs)
+    energy = vibergy(tap, fs)
     print(f"vibergy \u2248 {energy*1e3:.2f} mJ")

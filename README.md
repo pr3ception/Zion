@@ -21,7 +21,7 @@ if [B]av:
 
 ## Simulation examples
 
-Run `python3 Sim.py` to run the coil-bead and dual-turbine demos and compute a vibergy value.
+Run `python3 Sim.py` to run the coil-bead and dual-turbine demos and compute a vibergy value using the ``vibergy`` function.
 
 
 ## Quatbine dual-ring simulation

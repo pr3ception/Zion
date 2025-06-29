@@ -19,20 +19,10 @@ if [B]av:
     n6.append([B]av)
 ```
 
-## Coil-bead simulation
+## Simulation examples
 
-Run `python3 bdnrSim.py` to estimate the voltage a moving magnetic
-bead can induce in a taped coil. The calculation uses a basic magnetic-dipole
-approximation. A recent test shows a 0.325" neosphere jumping between two
-wrapped coils can generate roughly forty millivolts per jump, proving the
-"beadron" concept can operate as a simple logioid.
+Run `python3 Sim.py` to run the coil-bead and dual-turbine demos and compute a vibergy value.
 
-## Dual-turbine example
-
-`python3 dutbSim.py` demonstrates a simplified mechanism with two
-repelling turbines.  Two particles travel on mirrored diagonal paths—called a
-diazanul—repulsed from the core, guided along the rim and returned for the next
-cycle.
 
 ## Quatbine dual-ring simulation
 

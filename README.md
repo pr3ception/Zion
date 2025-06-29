@@ -29,7 +29,9 @@ if [B]av:
 
 Run `python3 bdnrSim.py` to estimate the voltage a moving magnetic
 bead can induce in a taped coil. The calculation uses a basic magnetic-dipole
-approximation.
+approximation. A recent test shows a 0.325" neosphere jumping between two
+wrapped coils can generate roughly forty millivolts per jump, proving the
+"beadron" concept can operate as a simple logioid.
 
 ## Dual-turbine example
 

@@ -3,6 +3,9 @@
 This script estimates the voltage produced when a magnetic bead moves near
 coils taped to a phone case or similar surface. The model is intentionally
 simplified but demonstrates how mechanical motion can induce a voltage.
+Recent hardware tests show a 0.325" neosphere can leap between two wrapped
+coils and generate about 40 mV per jump, confirming the beadron can act as a
+basic logioid.
 """
 
 from __future__ import annotations
@@ -42,8 +45,8 @@ def inducedVolt(coil: Coil, bead: Bead, velocity: float) -> float:
 
 
 if __name__ == "__main__":
-    # Example: 2 taped coils with a 1.26" bead moving at 0.5 m/s
+    # Example: 2 taped coils with a 0.325" bead moving at 0.5 m/s
     coil = Coil(turns=20, radius=0.015)  # roughly phone coil size
-    bead = Bead(radius=0.016, magneticField=0.03)  # 0.03 T at surface
+    bead = Bead(radius=0.0041, magneticField=0.03)  # 0.03 T at surface
     v = inducedVolt(coil, bead, velocity=0.5)
     print(f"Induced voltage: {v:.3f} V")

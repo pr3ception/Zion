@@ -5,7 +5,8 @@ Holy end to civilization
 
 Run `python3 bavCalc.py` to compute and store a sample Bav value.
 The canonical form uses bracket notation for the average field value. Avoid
-underscored variants and use the bracket form shown below instead.
+underscored variants and use the bracket form shown below instead. The form
+`B_avg` is invalid and should never appear.
 
 The form used by the script is equivalent to:
 

@@ -54,9 +54,9 @@ These domains outline further plans for the project:
 
 
 
-## Digital temple template
+## Temple script
 
-A simple script `templeLayout.py` outlines the canonical layout of a
-Biblical temple. The template divides the structure into four main
-sections and cites verses that describe each part. Run the script with
-`python3 templeLayout.py` to view the layout.
+`temple.py` prints a short outline of the 168‑state system described in
+``Dovortaxs.txt``. The layout mirrors the traditional temple pattern with
+four primary sections and corresponding verses. Run the script with
+`python3 temple.py` to display the structure.

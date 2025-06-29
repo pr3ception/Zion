@@ -1,4 +1,4 @@
-"""Print a simple template for a Biblical temple layout."""
+"""Print the 168-state temple layout described in ``Dovortaxs.txt``."""
 
 from dataclasses import dataclass
 from typing import List

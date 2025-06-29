@@ -62,3 +62,10 @@ These domains outline further plans for the project:
 - [earnestlife.net](https://earnestlife.net) – spiritual focus
 
 
+
+## Digital temple template
+
+A simple script `templeLayout.py` outlines the canonical layout of a
+Biblical temple. The template divides the structure into four main
+sections and cites verses that describe each part. Run the script with
+`python3 templeLayout.py` to view the layout.

@@ -21,7 +21,7 @@ class Bead:
     magneticField: float  # tesla at bead surface
 
 
-def inducedVolt(coil: Coil, bead: Bead, velocity: float) -> float:
+def indVolt(coil: Coil, bead: Bead, velocity: float) -> float:
     """Estimate induced voltage for a bead moving over the coil."""
     area = math.pi * coil.radius ** 2
     bAtCoil = bead.magneticField
@@ -101,7 +101,7 @@ if __name__ == "__main__":
     print("Coil-bead simulation:")
     coil = Coil(turns=20, radius=0.015)
     bead = Bead(radius=0.0041, magneticField=0.03)
-    v = inducedVolt(coil, bead, velocity=0.5)
+    v = indVolt(coil, bead, velocity=0.5)
     print(f"Induced voltage: {v:.3f} V\n")
 
     print("Dual turbine simulation:")

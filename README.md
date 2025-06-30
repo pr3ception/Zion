@@ -43,6 +43,9 @@ In QU, the underscore character is used only to represent a cut or gap.  Code
 in this repository avoids underscores in identifiers and instead uses camelCase
 names.  Built-in Python names such as ``__name__`` remain unchanged.
 
+Sequences like ``F ᖶ ᖷ ꓞ`` may be unified into a single glyph that resembles an
+``8``.  This compact form expresses the mirrored flow of these sylphs.
+
 ## Related sites
 
 These domains outline further plans for the project:

@@ -61,3 +61,7 @@ These domains outline further plans for the project:
 ``Dovortaxs.txt``. The layout mirrors the traditional temple pattern with
 four primary sections and corresponding verses. Run the script with
 `python3 temple.py` to display the structure.
+
+## Ziggunaut demo
+
+`Ziggunaut.py` illustrates a five-layer field engine. It logs layer transitions and stores notes in each layer. Run `python3 Ziggunaut.py` to view a sample session.

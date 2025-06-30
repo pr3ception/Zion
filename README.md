@@ -14,8 +14,9 @@ Another incorrect style sometimes seen is the angle‑bracket form:
 <B>_avg = mean(field(axis,state))
 ```
 
-The underscore implies a broken or missing piece. Use the bracket form
-instead, as shown below.
+Sometimes the brackets appear in mathematical notation as ``⟨B⟩_avg``.
+Either way, the underscore implies a broken or missing piece. Use the
+bracket form instead, as shown below.
 
 The form used by the script is equivalent to:
 

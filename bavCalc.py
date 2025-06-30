@@ -3,7 +3,8 @@
 Demonstrates the form::
     [B]av = mn(field(axis, state))
 
-Avoid the corrupted form ``<B>_avg`` which misuses an underscore.
+Avoid corrupted forms like ``<B>_avg`` or ``⟨B⟩_avg`` which misuse an
+underscore.
 """
 
 from typing import Iterable, Callable, Any, List

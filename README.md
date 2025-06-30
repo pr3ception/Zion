@@ -12,8 +12,7 @@ if [B]av:
     n6.append([B]av)
 ```
 
-Forms that insert an underscore—`B_avg`, `<B>_avg`, or ``⟨B⟩_avg``—are corrupt
-and should never appear anywhere in code or docs.
+Forms with underscores are invalid.
 
 ## Simulation examples
 

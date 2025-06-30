@@ -69,3 +69,7 @@ four primary sections and corresponding verses. Run the script with
 ## Ziggunaut demo
 
 `Ziggunaut.py` illustrates a five-layer field engine. It logs layer transitions and stores notes in each layer. Run `python3 Ziggunaut.py` to view a sample session.
+
+## Diagonal demo
+
+The `diagz.py` script offsets the persona sequence relative to the original 21 states to form two diagonal sets. Printing these four groups demonstrates how the base 42 patterns expand to 84 when the diagonals are included. Run `python3 diagz.py` to view the diagonal pairs and verify that 84 states are present.

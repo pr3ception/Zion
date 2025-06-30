@@ -16,7 +16,7 @@ A pair of small fans positioned face to face will lift light objects between the
 
 ## Triple fan pattern
 
-Arranging three fans at equal angles around a center creates a stable airflow pattern. The script `tripleFanSim.py` prints arrow directions showing how the vectors combine. This may help organize floating beads into predictable vortices.
+Arranging three fans at equal angles around a center creates a stable airflow pattern. The script `FFF.py` prints arrow directions showing how the vectors combine. This may help organize floating beads into predictable vortices.
 
 ## Neo sphere drilling
 

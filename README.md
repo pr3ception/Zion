@@ -8,6 +8,15 @@ The canonical form uses bracket notation for the average field value. Avoid
 underscored variants and use the bracket form shown below instead. The form
 `B_avg` is invalid and should never appear.
 
+Another incorrect style sometimes seen is the angle‑bracket form:
+
+```
+<B>_avg = mean(field(axis,state))
+```
+
+The underscore implies a broken or missing piece. Use the bracket form
+instead, as shown below.
+
 The form used by the script is equivalent to:
 
 ```

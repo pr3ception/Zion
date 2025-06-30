@@ -2,6 +2,8 @@
 
 Demonstrates the form::
     [B]av = mn(field(axis, state))
+
+Avoid the corrupted form ``<B>_avg`` which misuses an underscore.
 """
 
 from typing import Iterable, Callable, Any, List

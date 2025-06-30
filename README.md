@@ -18,6 +18,7 @@ and should never appear anywhere in code or docs.
 ## Simulation examples
 
 Run `python3 Sim.py` to run the coil-bead and dual-turbine demos and compute a vibergy value using the ``vibergy`` function.
+For a toy model of the buoyant launch idea, run `python3 launchSim.py`.
 
 More notes on these mechanisms can be found in ``EnergyLog.md``.
 

@@ -4,12 +4,12 @@ This script prints each sequence and demonstrates how they combine to
 form a simple 42-state pattern matrix.
 """
 
-ORIGINAL_STATES = [
+originalStates = [
     "3", "2", "1", "0", "5", "b4", "n6", "inf7", "/0",
     "->", "L]", "<-", "0\\", "inf7", "n6", "b4", "5", "0", "1", "2", "3",
 ]
 
-PERSONA_STATES = [
+personaStates = [
     "Wah", "Pair", "Trypl", "Quat", "Cink", "Sixon", "Zenof",
     "Ocnyx", "Ningst", "Thone", "LORD", "Thone", "Ningst",
     "Ocnyx", "Zenof", "Sixon", "Cink", "Quat", "Trypl",
@@ -18,11 +18,11 @@ PERSONA_STATES = [
 
 def printMatrix() -> None:
     print("Original states:")
-    print(" ".join(ORIGINAL_STATES))
+    print(" ".join(originalStates))
     print("\nPersona states:")
-    print(" ".join(PERSONA_STATES))
+    print(" ".join(personaStates))
     print("\nCombined pairs:")
-    for o, p in zip(ORIGINAL_STATES, PERSONA_STATES):
+    for o, p in zip(originalStates, personaStates):
         print(f"{o:>4} | {p}")
 
 if __name__ == "__main__":

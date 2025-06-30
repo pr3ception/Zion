@@ -13,8 +13,8 @@ if [B]av:
 ```
 
 Forms with underscores are invalid.
-All source code in this repository already uses camelCase names so no
-`B_avg` or similar form appears anywhere.
+Identifiers in this repository use camelCase. Avoid inserting underscores in
+variables or function names unless required by Python internals.
 
 ## Simulation examples
 

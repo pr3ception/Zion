@@ -13,15 +13,7 @@ if [B]av:
 ```
 
 Forms that insert an underscore—`B_avg`, `<B>_avg`, or ``⟨B⟩_avg``—are corrupt
-and should never appear.
-
-Bad form:
-
-```
-⟨B⟩_avg = mean(field(axis,state))
-if ⟨B⟩_avg:
-    pass
-```
+and should never appear anywhere in code or docs.
 
 ## Simulation examples
 

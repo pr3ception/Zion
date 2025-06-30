@@ -72,4 +72,4 @@ four primary sections and corresponding verses. Run the script with
 
 ## Diagonal demo
 
-The `diagz.py` script offsets the persona sequence relative to the original 21 states to form two diagonal sets. Printing these four groups demonstrates how the base 42 patterns expand to 84 when the diagonals are included. Run `python3 diagz.py` to view the diagonal pairs and verify that 84 states are present.
+The `diagz.py` script forms two diagonal pairings by offsetting the persona sequence forward and backward relative to the original states. Printing these pairs side by side shows how the base 42 patterns double when the diagonals are counted. Run `python3 diagz.py` to verify that all 84 states appear.

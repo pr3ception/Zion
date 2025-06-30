@@ -1,8 +1,10 @@
-"""Diagonal expansion of the 42-state grid to 84.
+"""Demonstrate how diagonal offsets expand the 42-state grid to 84.
 
-This script demonstrates one way the diagonal conditions in Dovortaxs
-might double the base 42 patterns. It offsets the persona sequence
-relative to the original states to form two diagonal pairings.
+Each diagonal is produced by pairing the 21 original states with an
+offset version of the persona sequence.  Shifting by ``+1`` and ``-1``
+gives two mirrored sets that illustrate the diagonal conditions from
+Dovortaxs.  Printing these groups together shows how the base patterns
+double when the diagonals are included.
 """
 
 originalStates = [
@@ -17,17 +19,23 @@ personaStates = [
     "Pair", "Wah",
 ]
 
-def diagonal(offset: int) -> list[str]:
+def diagonals() -> tuple[list[str], list[str]]:
+    """Return the two diagonal pairings as lists of strings."""
     n = len(personaStates)
-    return [f"{o}-{personaStates[(i+offset)%n]}" for i, o in enumerate(originalStates)]
+    diag1 = []
+    diag2 = []
+    for i, o in enumerate(originalStates):
+        diag1.append(f"{o}-{personaStates[(i + 1) % n]}")
+        diag2.append(f"{o}-{personaStates[(i - 1) % n]}")
+    return diag1, diag2
 
 def show() -> None:
-    diag1 = diagonal(1)
-    diag2 = diagonal(-1)
-    print("Diagonal set 1:")
-    print(" ".join(diag1))
-    print("\nDiagonal set 2:")
-    print(" ".join(diag2))
+    """Print both diagonal pairings and the total count."""
+    diag1, diag2 = diagonals()
+    print("Diagonal pairs:")
+    for a, b in zip(diag1, diag2):
+        print(f"{a:>12} | {b}")
+
     count = len(originalStates) + len(personaStates) + len(diag1) + len(diag2)
     print(f"\nTotal states including diagonals: {count}")
 

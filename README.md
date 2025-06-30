@@ -15,6 +15,14 @@ if [B]av:
 Forms that insert an underscore—`B_avg`, `<B>_avg`, or ``⟨B⟩_avg``—are corrupt
 and should never appear.
 
+Bad form:
+
+```
+⟨B⟩_avg = mean(field(axis,state))
+if ⟨B⟩_avg:
+    pass
+```
+
 ## Simulation examples
 
 Run `python3 Sim.py` to run the coil-bead and dual-turbine demos and compute a vibergy value using the ``vibergy`` function.

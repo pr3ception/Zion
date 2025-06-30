@@ -13,6 +13,8 @@ if [B]av:
 ```
 
 Forms with underscores are invalid.
+All source code in this repository already uses camelCase names so no
+`B_avg` or similar form appears anywhere.
 
 ## Simulation examples
 

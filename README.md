@@ -27,6 +27,7 @@ if ⟨B⟩_avg:
 
 Run `python3 Sim.py` to run the coil-bead and dual-turbine demos and compute a vibergy value using the ``vibergy`` function.
 
+More notes on these mechanisms can be found in ``EnergyLog.md``.
 
 ## Quatbine dual-ring simulation
 

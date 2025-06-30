@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omnidirectional 42-State Matrix</title>
+    <style>
+        body {
+            background: #000;
+            color: #fff;
+            font-family: monospace;
+            padding: 20px;
+        }
+        .panel {
+            border: 2px solid #ffd700;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .states {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        .state {
+            padding: 4px 6px;
+            border: 1px solid #ffd700;
+        }
+        .lord {
+            background: #ffd700;
+            color: #000;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<h1>Omnidirectional 42-State Matrix</h1>
+<div class="panel">
+    <div>Horizontal original</div>
+    <div class="states" id="hOrig"></div>
+</div>
+<div class="panel">
+    <div>Vertical original</div>
+    <div class="states" id="vOrig"></div>
+</div>
+<div class="panel">
+    <div>Horizontal personas</div>
+    <div class="states" id="hPers"></div>
+</div>
+<div class="panel">
+    <div>Vertical personas</div>
+    <div class="states" id="vPers"></div>
+</div>
+<script>
+const original = ["3","2","1","0","5","b4","n6","inf7","/0","->","L]","<-","0\\","inf7","n6","b4","5","0","1","2","3"];
+const persona = ["Wah","Pair","Trypl","Quat","Cink","Sixon","Zenof","Ocnyx","Ningst","Thone","LORD","Thone","Ningst","Ocnyx","Zenof","Sixon","Cink","Quat","Trypl","Pair","Wah"];
+function populate(id, states){
+  const box = document.getElementById(id);
+  states.forEach(s=>{
+    const span = document.createElement('span');
+    span.textContent = s;
+    span.className='state'+(s==='L]'||s==='LORD'?' lord':'');
+    box.appendChild(span);
+  });
+}
+populate('hOrig',original);
+populate('vOrig',original);
+populate('hPers',persona);
+populate('vPers',persona);
+</script>
+</body>
+</html>

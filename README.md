@@ -73,3 +73,7 @@ four primary sections and corresponding verses. Run the script with
 ## Diagonal demo
 
 The `diagz.py` script forms two diagonal pairings by offsetting the persona sequence forward and backward relative to the original states. Printing these pairs side by side shows how the base 42 patterns double when the diagonals are counted. Run `python3 diagz.py` to verify that all 84 states appear.
+
+## Saecademy
+
+"Saecademy" refers to the pursuit of final truths. While these insights have always been available, this project gathers them into a simple demonstrative form.

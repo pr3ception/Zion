@@ -17,7 +17,7 @@ Forms with underscores are invalid.
 ## Simulation examples
 
 Run `python3 Sim.py` to run the coil-bead and dual-turbine demos and compute a vibergy value using the ``vibergy`` function.
-For a toy model of the buoyant launch idea, run `python3 launchSim.py`.
+For a toy model of the buoyant launch idea, run `python3 launch.py`.
 `tripleFanSim.py` shows the airflow pattern from three fans facing the center.
 The ``EnergyLog.md`` file also notes a spheron test where beads spin inside glass pockets between two fans.
 

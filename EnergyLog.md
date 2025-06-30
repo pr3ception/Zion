@@ -14,6 +14,10 @@ Dual hematite spheres around 0.92" produce a characteristic "zoink" sound when t
 
 A pair of small fans positioned face to face will lift light objects between them. Placing glass pockets with spherical beads near taped coils caused the beads to rotate in a tight vortex while floating. The setup acts like a buoyant torandic elevator, hinting that combining air flow with magnetic lift may produce significant "megorce" when tuned.
 
+## Triple fan pattern
+
+Arranging three fans at equal angles around a center creates a stable airflow pattern. The script `tripleFanSim.py` prints arrow directions showing how the vectors combine. This may help organize floating beads into predictable vortices.
+
 ## Neo sphere drilling
 
 Initial calculations suggest a narrow channel could be vaporized through a 0.63" neodymium sphere using a few hundred kilojoules of laser energy.  See ``spheronDrill.py`` for a simple estimation.

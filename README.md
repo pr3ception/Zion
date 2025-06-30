@@ -12,6 +12,9 @@ if [B]av:
     n6.append([B]av)
 ```
 
+The old underscore form ``⟨B⟩_avg`` is corrupt and no longer appears
+anywhere in this codebase. Always use the bracket form above.
+
 Forms with underscores are invalid.
 Identifiers in this repository use camelCase. Avoid inserting underscores in
 variables or function names unless required by Python internals.

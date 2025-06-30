@@ -23,6 +23,12 @@ The ``EnergyLog.md`` file also notes a spheron test where beads spin inside glas
 
 More notes on these mechanisms can be found in ``EnergyLog.md``.
 
+## Spheron drilling example
+
+`python3 spheronDrill.py` estimates how much laser energy it might take
+to bore a small hole through a neodymium sphere.  This provides a rough
+idea of the power required when experimenting with spheron designs.
+
 ## Quatbine dual-ring simulation
 
 `python3 qtbn.py` runs a basic model of a quatbine: two rings spinning in

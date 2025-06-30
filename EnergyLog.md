@@ -14,6 +14,10 @@ Dual hematite spheres around 0.92" produce a characteristic "zoink" sound when t
 
 A pair of small fans positioned face to face will lift light objects between them. Placing glass pockets with spherical beads near taped coils caused the beads to rotate in a tight vortex while floating. The setup acts like a buoyant torandic elevator, hinting that combining air flow with magnetic lift may produce significant "megorce" when tuned.
 
+## Neo sphere drilling
+
+Initial calculations suggest a narrow channel could be vaporized through a 0.63" neodymium sphere using a few hundred kilojoules of laser energy.  See ``spheronDrill.py`` for a simple estimation.
+
 ## Combined simulation
 
 The `Sim.py` demo shows a coil-bead test, a dual-turbine model and a vibergy calculation example. Run `python3 Sim.py` to see these in action.

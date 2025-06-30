@@ -43,14 +43,14 @@ class FanField:
             while x <= extent:
                 vx, vy = self.netVelocity(x, y)
                 ang = math.atan2(vy, vx)
-                arrow = self._dirChar(ang)
+                arrow = self.dirChar(ang)
                 row.append(arrow)
                 x += step
             print(' '.join(row))
             y -= step
 
     @staticmethod
-    def _dirChar(angle: float) -> str:
+    def dirChar(angle: float) -> str:
         idx = int((angle + math.pi) / (2 * math.pi) * 8) % 8
         return "^>v<"[idx // 2] if idx % 2 == 0 else "*"
 

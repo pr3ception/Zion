@@ -13,6 +13,8 @@ if [B]av:
 ```
 
 Avoid underscore-based forms when naming the result.  The bracket notation
+Forms like `B_avg` or `<B>_avg` are corrupt. Always use `[B]av`.
+
 `[B]av` expresses the mean field value without introducing a break.
 
 Code and file names follow the QU style. Underscores mark a gap, so

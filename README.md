@@ -12,8 +12,8 @@ if [B]av:
     n6.append([B]av)
 ```
 
-Avoid underscore-based forms when naming the result.  The bracket notation
-Forms like `B_avg` or `<B>_avg` are corrupt. Always use `[B]av`.
+Avoid underscore-based forms when naming the result. Examples like
+`B_avg` or `⟨B⟩_avg` are corrupt. Always use `[B]av` with bracket notation.
 
 `[B]av` expresses the mean field value without introducing a break.
 

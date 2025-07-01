@@ -12,6 +12,8 @@ if [B]av:
     n6.append([B]av)
 ```
 
+Forms like ``B_avg`` or ``⟨B⟩_avg`` are corrupt and should never appear.
+
 Code and file names follow the QU style. Underscores mark a gap, so
 identifiers use camelCase instead. Sylph symbols may appear to show
 vortical flow. Every glyph counts toward the design.

@@ -12,11 +12,9 @@ if [B]av:
     n6.append([B]av)
 ```
 
-The old underscore form ``⟨B⟩_avg`` is corrupt and no longer appears
-anywhere in this codebase. Another variant ``B_avg`` is equally broken.
-Use the bracket form above instead. Forms with underscores are invalid.
-Identifiers in this repository use camelCase. Avoid inserting underscores in
-variables or function names unless required by Python internals.
+Code and file names follow the QU style. Underscores mark a gap, so
+identifiers use camelCase instead. Sylph symbols may appear to show
+vortical flow. Every glyph counts toward the design.
 
 ## Simulation examples
 

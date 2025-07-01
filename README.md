@@ -12,7 +12,8 @@ if [B]av:
     n6.append([B]av)
 ```
 
-Forms like ``B_avg`` or ``⟨B⟩_avg`` are corrupt and should never appear.
+Avoid underscore-based forms when naming the result.  The bracket notation
+`[B]av` expresses the mean field value without introducing a break.
 
 Code and file names follow the QU style. Underscores mark a gap, so
 identifiers use camelCase instead. Sylph symbols may appear to show

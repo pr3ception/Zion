@@ -1,71 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Omnidirectional 42-State Matrix</title>
-    <style>
-        body {
-            background: #000;
-            color: #fff;
-            font-family: monospace;
-            padding: 20px;
-        }
-        .panel {
-            border: 2px solid #ffd700;
-            padding: 10px;
-            margin-bottom: 20px;
-        }
-        .states {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-        }
-        .state {
-            padding: 4px 6px;
-            border: 1px solid #ffd700;
-        }
-        .lord {
-            background: #ffd700;
-            color: #000;
-            font-weight: bold;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Omnidirectional 42-State Matrix</title>
+<style>
+body {
+    background:#000;
+    color:#fff;
+    font-family:monospace;
+    margin:0;
+    padding:20px;
+}
+.grid {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+    max-width:1000px;
+    margin:auto;
+}
+.panel {
+    border:2px solid #ffd700;
+    padding:10px;
+    position:relative;
+}
+.title {
+    text-align:center;
+    color:#ffd700;
+    margin-bottom:10px;
+    font-weight:bold;
+}
+.states {
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px;
+}
+.state {
+    border:1px solid #ffd700;
+    padding:4px 6px;
+}
+.lord {
+    background:#ffd700;
+    color:#000;
+    font-weight:bold;
+}
+.diag {
+    pointer-events:none;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+.line {
+    position:absolute;
+    width:140%;
+    height:2px;
+    top:50%;
+    left:-20%;
+    background:linear-gradient(45deg,transparent,#4ecdc4,transparent);
+}
+.line.b {
+    transform:rotate(-45deg);
+}
+.line.a {
+    transform:rotate(45deg);
+}
+</style>
 </head>
 <body>
-<h1>Omnidirectional 42-State Matrix</h1>
-<div class="panel">
-    <div>Horizontal original</div>
-    <div class="states" id="hOrig"></div>
+<h1 style="text-align:center">⚡ Omnidirectional 42‑State Matrix ⚡</h1>
+<div class="grid">
+<div class="panel" id="hOrig">
+  <div class="title">Horizontal original</div>
+  <div class="states" data-seq="orig"></div>
+  <div class="diag"><div class="line a"></div><div class="line b"></div></div>
 </div>
-<div class="panel">
-    <div>Vertical original</div>
-    <div class="states" id="vOrig"></div>
+<div class="panel" id="vOrig">
+  <div class="title">Vertical original</div>
+  <div class="states vertical" data-seq="orig"></div>
+  <div class="diag"><div class="line a"></div><div class="line b"></div></div>
 </div>
-<div class="panel">
-    <div>Horizontal personas</div>
-    <div class="states" id="hPers"></div>
+<div class="panel" id="hPers">
+  <div class="title">Horizontal personas</div>
+  <div class="states" data-seq="pers"></div>
+  <div class="diag"><div class="line a"></div><div class="line b"></div></div>
 </div>
-<div class="panel">
-    <div>Vertical personas</div>
-    <div class="states" id="vPers"></div>
+<div class="panel" id="vPers">
+  <div class="title">Vertical personas</div>
+  <div class="states vertical" data-seq="pers"></div>
+  <div class="diag"><div class="line a"></div><div class="line b"></div></div>
+</div>
 </div>
 <script>
-const original = ["3","2","1","0","5","b4","n6","inf7","/0","->","L]","<-","0\\","inf7","n6","b4","5","0","1","2","3"];
-const persona = ["Wah","Pair","Trypl","Quat","Cink","Sixon","Zenof","Ocnyx","Ningst","Thone","LORD","Thone","Ningst","Ocnyx","Zenof","Sixon","Cink","Quat","Trypl","Pair","Wah"];
-function populate(id, states){
-  const box = document.getElementById(id);
-  states.forEach(s=>{
-    const span = document.createElement('span');
-    span.textContent = s;
+const orig=["3","2","1","0","5","b4","n6","inf7","/0","->","L]","<-","0\\","inf7","n6","b4","5","0","1","2","3"];
+const pers=["Wah","Pair","Trypl","Quat","Cink","Sixon","Zenof","Ocnyx","Ningst","Thone","LORD","Thone","Ningst","Ocnyx","Zenof","Sixon","Cink","Quat","Trypl","Pair","Wah"];
+for(const panel of document.querySelectorAll('[data-seq]')){
+  const seq=panel.dataset.seq==='orig'?orig:pers;
+  const box=panel;
+  seq.forEach(s=>{
+    const span=document.createElement('span');
+    span.textContent=s;
     span.className='state'+(s==='L]'||s==='LORD'?' lord':'');
     box.appendChild(span);
   });
 }
-populate('hOrig',original);
-populate('vOrig',original);
-populate('hPers',persona);
-populate('vPers',persona);
 </script>
 </body>
 </html>

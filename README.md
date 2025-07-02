@@ -13,8 +13,9 @@ if [B]av:
 ```
 
 Forms that insert a break are corrupt. Always use ``[B]av`` with bracket
-notation.  Underscore forms mark a gap and must not appear. Forms like
-``B_avg`` or ``⟨B⟩_avg`` are invalid and should never be written:
+notation.  Underscore forms mark a gap and must not appear. Expressions
+written as ``B`` followed by an underscore and ``avg`` (or the angle bracket
+form with an underscore) are invalid and should never be written:
 
 ```
 [B]av = mn(field(axis,state))

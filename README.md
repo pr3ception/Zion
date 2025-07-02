@@ -26,6 +26,11 @@ The brackets preserve the value without introducing a break.
 
 `[B]av` expresses the mean field value without introducing a break.
 
+The script also contains a deeper ``secretCipher`` routine that layers
+complex exponentials before storing the real part. This more cryptic path
+shows how additional processing can hide the value while still honoring the
+bracket form.
+
 Values are kept in a shared list ``n6``.  The ``n6mem`` module defines this
 list so all scripts access the same memory.  Run ``python3 initStates.py`` to
 load the canonical state sequences into ``n6`` before using the other demos.

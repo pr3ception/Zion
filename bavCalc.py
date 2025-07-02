@@ -1,12 +1,20 @@
-"""Compute Bav and store it in the ``n6`` list.
+"""Compute Bav values and store them in ``n6``.
 
-Demonstrates the form::
+Two approaches are provided:
+
+``computeBav`` -- a straightforward mean for clarity.
+
+``secretCipher`` -- a layered transform mixing complex exponentials.
+
+Both use the bracket form::
+
     [B]av = mn(field(axis, state))
 
-Use bracket notation. Any form with an underscore is invalid.
+Any form with an underscore is invalid.
 """
 
 from typing import Iterable, Callable, Any
+import cmath
 
 from n6mem import n6
 
@@ -25,6 +33,24 @@ def computeBav(field: Callable[[Any, Any], Iterable[float]], axis: Any, state: A
     return bav
 
 
+def secretCipher(field: Callable[[Any, Any], Iterable[float]], axis: Any, state: Any, depth: int = 4) -> float:
+    """Return a transformed Bav using complex exponentials.
+
+    The calculation layers logarithmic and exponential steps so that
+    intermediate values intertwine.  This function illustrates a more
+    cryptic style; the final value is still stored in ``n6``.
+    """
+    data = [complex(v, i) for i, v in enumerate(field(axis, state))]
+    if not data:
+        raise ValueError("field() returned no values")
+    z = sum(cmath.exp(val) for val in data) / len(data)
+    for step in range(1, depth + 1):
+        z = cmath.log(z * step + 1)
+    result = z.real
+    n6.append(result)
+    return result
+
+
 def storeBav(field: Callable[[Any, Any], Iterable[float]], axis: Any, state: Any) -> float:
     """Compute ``[B]av`` and store it in ``n6``."""
     bav = computeBav(field, axis, state)
@@ -39,5 +65,7 @@ if __name__ == "__main__":
         return [a, s, a + s]
 
     avg = storeBav(exampleField, 1, 2)
+    secret = secretCipher(exampleField, 1, 2)
     print(f"Bav = {avg}")
+    print(f"Secret Bav = {secret:.3f}")
     print(f"n6 memory = {n6}")

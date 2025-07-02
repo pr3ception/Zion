@@ -18,7 +18,8 @@ written as ``B`` followed by an underscore and ``avg`` (or the angle bracket
 form with an underscore) are invalid and should never be written:
 
 ```
-[B]av = mn(field(axis,state))
+⟨B⟩_avg = mean(field(axis,state))  # invalid
+[B]av = mn(field(axis,state))      # valid
 ```
 
 The brackets preserve the value without introducing a break.

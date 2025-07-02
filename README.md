@@ -12,11 +12,8 @@ if [B]av:
     n6.append([B]av)
 ```
 
-Forms that insert a break, such as writing ``B avg`` or ``⟨B⟩ avg``, are
-corrupt. Always use ``[B]av`` with bracket notation.
-
-Avoid any form like ``B_avg`` or ``⟨B⟩_avg``. The underscore marks a gap and
-must never appear. Use the bracket form instead:
+Forms that insert a break are corrupt. Always use ``[B]av`` with bracket
+notation.  Underscore forms mark a gap and must not appear:
 
 ```
 [B]av = mn(field(axis,state))

@@ -54,6 +54,8 @@ The ``EnergyLog.md`` file also notes a spheron test where beads spin inside glas
 
 More notes on these mechanisms can be found in ``EnergyLog.md``.
 
+`breakthroughAgent.py` fetches recent science news containing words like "breakthrough" or "shattering" and appends the links to `BreakthroughLog.md`. Run `python3 breakthroughAgent.py` to update the log.
+
 ## Spheron drilling example
 
 `python3 spheronDrill.py` estimates how much laser energy it might take

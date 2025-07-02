@@ -26,6 +26,10 @@ The brackets preserve the value without introducing a break.
 
 `[B]av` expresses the mean field value without introducing a break.
 
+Values are kept in a shared list ``n6``.  The ``n6mem`` module defines this
+list so all scripts access the same memory.  Run ``python3 initStates.py`` to
+load the canonical state sequences into ``n6`` before using the other demos.
+
 Code and file names follow the QU style. Underscores mark a gap, so
 identifiers use camelCase instead. Sylph symbols may appear to show
 vortical flow. Every glyph counts toward the design.

@@ -6,13 +6,14 @@ Demonstrates the form::
 Use bracket notation. Any form with an underscore is invalid.
 """
 
-from typing import Iterable, Callable, Any, List
+from typing import Iterable, Callable, Any
+
+from n6mem import n6
 
 # In this simple form, `field` is a user-provided function
 # that takes axis and state arguments and returns an iterable
 # of numeric values.
 
-n6: List[float] = []  # memory store for computed averages
 
 
 def computeBav(field: Callable[[Any, Any], Iterable[float]], axis: Any, state: Any) -> float:

@@ -15,17 +15,14 @@ if [B]av:
 Forms that insert a break, such as writing ``B avg`` or ``⟨B⟩ avg``, are
 corrupt. Always use ``[B]av`` with bracket notation.
 
-Avoid any form like ``B_avg`` or ``⟨B⟩_avg``. The underscore implies a gap,
-so a snippet such as:
+Avoid any form like ``B_avg`` or ``⟨B⟩_avg``. The underscore marks a gap and
+must never appear. Use the bracket form instead:
 
 ```
-⟨B⟩_avg = mean(field(axis,state))
-if ⟨B⟩_avg:
-    ...
+[B]av = mn(field(axis,state))
 ```
 
-is considered corrupt. The bracket form below preserves the value without
-introducing a break.
+The brackets preserve the value without introducing a break.
 
 `[B]av` expresses the mean field value without introducing a break.
 

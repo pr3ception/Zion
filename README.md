@@ -46,6 +46,7 @@ and demonstrates how they pair into a 42‑state grid.
 `matrix.html` renders these sequences in four orientations so you can view the
 full 42‑state matrix in a browser. A diagonal overlay shows the emerging
 diamond pattern that completes the 84 states.
+`diamonbine.html` animates a wheel within a wheel using a rotating diamond so you can view the diamonbine pattern in motion.
 The ``EnergyLog.md`` file also notes a spheron test where beads spin inside glass pockets between two fans.
 
 More notes on these mechanisms can be found in ``EnergyLog.md``.

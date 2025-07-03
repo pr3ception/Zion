@@ -48,6 +48,7 @@ and demonstrates how they pair into a 42‑state grid.
 full 42‑state matrix in a browser. A diagonal overlay shows the emerging
 diamond pattern that completes the 84 states.
 `diamonbine.html` animates a wheel within a wheel using a rotating diamond so you can view the diamonbine pattern in motion.
+Recent entries in EnergyLog.md mention 35 mm coils with a 10mm hole wound with 0.35 mm wire measuring about 14Ω resistance. A 1.26" sphere can produce over 3 V per hand pass, so a 19.5 V 330 W adapter should power the setup.
 The ``EnergyLog.md`` file also notes a spheron test where beads spin inside glass pockets between two fans.
 
 More notes on these mechanisms can be found in ``EnergyLog.md``.

@@ -16,5 +16,5 @@ Contributors should maintain these conventions in code and documentation.
 
 `breakAgent.py` queries the Hacker News API for articles with terms such as
 "breakthrough" or "shattering". It filters results to the last 30 days and
-avoids duplicates in `BreakthroughLog.md`.  Adjust the keywords in the script if
+avoids duplicates in `BrkThrLOG.md`.  Adjust the keywords in the script if
 certain topics become irrelevant.

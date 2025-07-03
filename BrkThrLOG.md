@@ -7,7 +7,6 @@
 - [Fusion energy breakthrough by Livermore Lab](https://www.ft.com/content/4b6f0fab-66ef-4e33-adec-cfc345589dc7)
 - [Leonardo Da Vinci Painting Sells for $450.3M, Shattering Auction Records](https://www.nytimes.com/2017/11/15/arts/design/leonardo-da-vinci-salvator-mundi-christies-auction.html?action=Click&contentCollection=BreakingNews&contentID=66089700&pgtype=Homepage&_r=0)
 - [Parental alienation and the unregulated experts shattering children’s lives](https://www.theguardian.com/global-development/2022/jun/12/parental-alienation-and-the-unregulated-experts-shattering-childrens-lives)
-- [Bitcoin price hits $40k less than three weeks after shattering $20K](https://cointelegraph.com/news/bitcoin-price-hits-40-000-less-than-three-weeks-after-shattering-20k)
 - [Get ready for many more record-shattering heatwaves](https://www.axios.com/record-shattering-heat-waves-becoming-far-more-likely-study-e13fde50-45d8-4bcd-bc86-efecba6c5217.html)
 - [Physics is on the verge of an Earth-shattering discovery?](https://aeon.co/opinions/physics-is-on-the-verge-of-an-earth-shattering-discovery)
 - [Unheard History of Bodybuilding Forums](https://melmagazine.com/en-us/story/the-unheard-history-of-bodybuilding-forums-as-told-by-the-trolls-and-counter-trolls-who-made-them-huge)
@@ -16,22 +15,6 @@
 - [‘Unheard of’ marine heatwave off UK and Irish coasts poses serious threat](https://www.theguardian.com/environment/2023/jun/19/marine-heatwave-uk-irish-coasts-threat-oysters-fish-high-temperatures)
 - [Kleiner Perkins reaches out to new investors: "Unheard of"](http://venturebeat.com/2009/01/14/kleiner-perkins-forced-to-reach-out-to-new-investors-unheard-of/)
 
-## 2025-07-02 13:54 UTC
-- [OpenAI O3 breakthrough high score on ARC-AGI-PUB](https://arcprize.org/blog/oai-o3-pub-breakthrough)
-- [Psilocybin for major depression granted Breakthrough Therapy by FDA](https://newatlas.com/science/psilocybin-major-depression-mdd-usona-breakthrough-therapy-fda/)
-- [Google achieves AI 'breakthrough' by beating Go champion](http://www.bbc.co.uk/news/technology-35420579)
-- [Major breakthrough on nuclear fusion energy](https://www.bbc.co.uk/news/science-environment-60312633)
-- [Fusion energy breakthrough by Livermore Lab](https://www.ft.com/content/4b6f0fab-66ef-4e33-adec-cfc345589dc7)
-- [Leonardo Da Vinci Painting Sells for $450.3M, Shattering Auction Records](https://www.nytimes.com/2017/11/15/arts/design/leonardo-da-vinci-salvator-mundi-christies-auction.html?action=Click&contentCollection=BreakingNews&contentID=66089700&pgtype=Homepage&_r=0)
-- [Parental alienation and the unregulated experts shattering children’s lives](https://www.theguardian.com/global-development/2022/jun/12/parental-alienation-and-the-unregulated-experts-shattering-childrens-lives)
-- [Bitcoin price hits $40k less than three weeks after shattering $20K](https://cointelegraph.com/news/bitcoin-price-hits-40-000-less-than-three-weeks-after-shattering-20k)
-- [Get ready for many more record-shattering heatwaves](https://www.axios.com/record-shattering-heat-waves-becoming-far-more-likely-study-e13fde50-45d8-4bcd-bc86-efecba6c5217.html)
-- [Physics is on the verge of an Earth-shattering discovery?](https://aeon.co/opinions/physics-is-on-the-verge-of-an-earth-shattering-discovery)
-- [Unheard History of Bodybuilding Forums](https://melmagazine.com/en-us/story/the-unheard-history-of-bodybuilding-forums-as-told-by-the-trolls-and-counter-trolls-who-made-them-huge)
-- [Nokia and Airbus elected as judges at the UPC, an unheard corruption of Justice](https://ffii.org/nokia-and-airbus-elected-as-judges-at-the-kangaroo-unified-patent-court-kupc/)
-- [Atlassian, AU company raises US60M, unheard of for Australian company](http://www.smh.com.au/technology/enterprise/from-uni-dropouts-to-software-magnates-20100715-10bdh.html)
-- [‘Unheard of’ marine heatwave off UK and Irish coasts poses serious threat](https://www.theguardian.com/environment/2023/jun/19/marine-heatwave-uk-irish-coasts-threat-oysters-fish-high-temperatures)
-- [Kleiner Perkins reaches out to new investors: "Unheard of"](http://venturebeat.com/2009/01/14/kleiner-perkins-forced-to-reach-out-to-new-investors-unheard-of/)
 
 ## 2025-07-03 01:34 UTC
 - ["Flaky breakthroughs" pervade coaching – but no one tracks them](https://chrislakin.blog/p/flaky-breakthroughs)

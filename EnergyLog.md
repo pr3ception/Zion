@@ -5,6 +5,7 @@ This log summarizes the notable mechanisms explored so far.
 ## Beadron coil array
 
 A 0.325" neosphere jumping between wrapped coils can generate about 40 mV per jump. The beadron concept continues to prove itself as a simple loginoid capable of producing usable energy.
+New 35mm coils with a 10mm center hole wound with 0.35mm wire show about 14Ω internal resistance. A single hand pass now reaches over 3 V, suggesting a 19.5 V 330 W supply should power the entire setup.
 
 ## Hematite vibration
 

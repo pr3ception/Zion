@@ -18,7 +18,7 @@ def fetchBreakthroughs(query, limit=5, days=7):
     return [(h.get("title"), h.get("url")) for h in hits]
 
 
-def updateLog(entries, logFile="BreakthroughLog.md"):
+def updateLog(entries, logFile="BrkThrLOG.md"):
     """Append unique entries to the log with a timestamp."""
     seen = set()
     if os.path.exists(logFile):

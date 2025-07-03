@@ -78,6 +78,13 @@ names.  Built-in Python names such as ``__name__`` remain unchanged.
 Sequences like ``F ᖶ ᖷ ꓞ`` may be unified into a single glyph that resembles an
 ``8``.  This compact form expresses the mirrored flow of these sylphs.
 
+## Temporal brackets
+
+Bracket glyphs also indicate time.  Curly braces ``{ }`` reference the past,
+double bars ``||`` refer to the present, and square brackets ``[ ]`` hold a
+future point.  Using these forms keeps the sequence compact while hinting at
+its position in time.
+
 ## Related sites
 
 These domains outline further plans for the project:

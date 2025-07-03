@@ -32,3 +32,14 @@
 - [Atlassian, AU company raises US60M, unheard of for Australian company](http://www.smh.com.au/technology/enterprise/from-uni-dropouts-to-software-magnates-20100715-10bdh.html)
 - [‘Unheard of’ marine heatwave off UK and Irish coasts poses serious threat](https://www.theguardian.com/environment/2023/jun/19/marine-heatwave-uk-irish-coasts-threat-oysters-fish-high-temperatures)
 - [Kleiner Perkins reaches out to new investors: "Unheard of"](http://venturebeat.com/2009/01/14/kleiner-perkins-forced-to-reach-out-to-new-investors-unheard-of/)
+
+## 2025-07-03 01:34 UTC
+- ["Flaky breakthroughs" pervade coaching – but no one tracks them](https://chrislakin.blog/p/flaky-breakthroughs)
+- [Breakthrough on 125 Year-Old Physics Problem [video]](https://www.youtube.com/watch?v=mxWJJl44UEQ)
+- [A bumbling game of robot soccer was a breakthrough for embodied AI](https://www.nbcnews.com/world/china/bumbling-game-robot-soccer-was-breakthrough-embodied-ai-rcna215780)
+- [Show HN: Natural Language Sprite Animator](https://gametorch.app/sprite-animator)
+- [New Blood Type Discovered in France Offers Breakthrough in Transfusion Medicine](https://www.discovermagazine.com:443/health/new-blood-type-discovered-in-france-and-offers-a-breakthrough-in-transfusion)
+- Show HN: Empromptu.ai – Agentic AI Building Real AI Apps
+- [Show HN: Jumble, a Lifetime of Art on the Scrapheap](https://mm-dev.rocks/jumble/)
+- [Show HN: Dungeon Master in Your Console](https://github.com/derekburgess/dungen)
+- Ask HN: Anyone using augmented reality, VR, glasses, helmets etc. in industry?

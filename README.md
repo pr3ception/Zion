@@ -54,7 +54,9 @@ The ``EnergyLog.md`` file also notes a spheron test where beads spin inside glas
 
 More notes on these mechanisms can be found in ``EnergyLog.md``.
 
-`breakAgent.py` fetches recent science news containing words like "breakthrough" or "shattering" and appends the links to `BreakthroughLog.md`. Run `python3 breakAgent.py` to update the log.
+`breakAgent.py` queries the Hacker News API for stories containing words like
+"breakthrough" or "shattering" from the last 30 days and appends any new links
+to `BreakthroughLog.md`. Run `python3 breakAgent.py` to update the log.
 
 ## Spheron drilling example
 

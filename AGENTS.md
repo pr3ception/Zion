@@ -17,7 +17,9 @@ Contributors should maintain these conventions in code and documentation.
 Diagonal segments in the Ziggunaut are called *diagznuls*.  They appear as
 crawling diagonals across the lattice and show how the 42 base patterns
 expand to 84 when mirrored.  Missing points labeled 2, 6, 8 and 9 act as a
-container so the pattern steps cleanly through the full mirror.
+container so the pattern steps cleanly through the full mirror. Because
+2 + 6 + 8 + 9 equals 25 (a 5×5 square), the reverse order 9‑8‑6‑2 forms the
+same container across other axes.
 
 ## Research agent notes
 

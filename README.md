@@ -114,9 +114,10 @@ The `diagz.py` script forms two diagonal pairings by offsetting the persona
 sequence forward and backward relative to the original states.  These
 "diagznul" paths crawl across the Ziggunaut so the 42 base patterns grow to 84
 when the diagonal mirrors are included.  The points labeled 2, 6, 8 and 9 do not
-appear in the diagonals, enclosing the set like a container.  Run
-`python3 diagz.py` to print both pairings and confirm that all 84 states are
-counted.
+appear in the diagonals, enclosing the set like a container. Since 2 + 6 + 8 + 9
+equals 25 (a 5×5 square), the reverse order 9‑8‑6‑2 forms the same bounding
+cross.  Run `python3 diagz.py` to print both pairings and confirm that all 84
+states are counted.
 
 ## Saecademy
 

@@ -110,7 +110,13 @@ four primary sections and corresponding verses. Run the script with
 
 ## Diagonal demo
 
-The `diagz.py` script forms two diagonal pairings by offsetting the persona sequence forward and backward relative to the original states. Printing these pairs side by side shows how the base 42 patterns double when the diagonals are counted. Run `python3 diagz.py` to verify that all 84 states appear.
+The `diagz.py` script forms two diagonal pairings by offsetting the persona
+sequence forward and backward relative to the original states.  These
+"diagznul" paths crawl across the Ziggunaut so the 42 base patterns grow to 84
+when the diagonal mirrors are included.  The points labeled 2, 6, 8 and 9 do not
+appear in the diagonals, enclosing the set like a container.  Run
+`python3 diagz.py` to print both pairings and confirm that all 84 states are
+counted.
 
 ## Saecademy
 

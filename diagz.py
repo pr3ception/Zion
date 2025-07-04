@@ -30,14 +30,28 @@ def diagonals() -> tuple[list[str], list[str]]:
     return diag1, diag2
 
 def show() -> None:
-    """Print both diagonal pairings and the total count."""
+    """Print diagonal pairings and totals.
+
+    When called directly this prints the two diagonal sets that
+    expand the 42 base states to 84.  If ``--mirror`` is passed on
+    the command line, the output also shows the mirrored copy so the
+    full 168 states are enumerated.
+    """
     diag1, diag2 = diagonals()
     print("Diagonal pairs:")
     for a, b in zip(diag1, diag2):
         print(f"{a:>12} | {b}")
 
-    count = len(originalStates) + len(personaStates) + len(diag1) + len(diag2)
-    print(f"\nTotal states including diagonals: {count}")
+    base = originalStates + personaStates + diag1 + diag2
+    print(f"\nTotal states including diagonals: {len(base)}")
+
+    import sys
+    if len(sys.argv) > 1 and sys.argv[1] == "--mirror":
+        mirror = list(reversed(base))
+        print("\nMirrored copy (168 states total):")
+        for i, state in enumerate(mirror, start=1):
+            print(f"{i:3}: {state}")
+        print(f"\nTotal states with mirror: {len(base) + len(mirror)}")
 
 if __name__ == "__main__":
     show()

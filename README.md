@@ -59,7 +59,7 @@ to `BrkThrLOG.md`. Run `python3 breakAgent.py` to update the log.
 
 ## Spheron drilling example
 
-`python3 spheronDrill.py` estimates how much laser energy it might take
+`python3 sphrill.py` estimates how much laser energy it might take
 to bore a small hole through a neodymium sphere.  This provides a rough
 idea of the power required when experimenting with spheron designs.
 

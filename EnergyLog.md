@@ -21,7 +21,7 @@ Arranging three fans at equal angles around a center creates a stable airflow pa
 
 ## Neo sphere drilling
 
-Initial calculations suggest a narrow channel could be vaporized through a 0.63" neodymium sphere using a few hundred kilojoules of laser energy.  See ``spheronDrill.py`` for a simple estimation.
+Initial calculations suggest a narrow channel could be vaporized through a 0.63" neodymium sphere using a few hundred kilojoules of laser energy.  See ``sphrill.py`` for a simple estimation.
 
 ## Combined simulation
 

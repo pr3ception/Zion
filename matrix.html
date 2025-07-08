@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Omnidirectional 42-State Matrix</title>
+<style>
+body{
+  background:#000;
+  color:#fff;
+  font-family:monospace;
+  margin:0;
+  padding:20px;
+}
+.main-container{display:flex;flex-direction:column;align-items:center;gap:30px;min-width:1200px;}
+.orientation-grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:40px;width:100%;max-width:1400px;}
+.orientation-panel{background:rgba(255,255,255,0.05);border:2px solid rgba(255,215,0,0.3);border-radius:15px;padding:20px;position:relative;}
+.panel-title{text-align:center;font-size:18px;color:#ffd700;margin-bottom:15px;font-weight:bold;}
+.horizontal-sequence{display:flex;justify-content:center;align-items:center;gap:8px;flex-wrap:wrap;font-size:14px;}
+.vertical-sequence{display:flex;flex-direction:column;align-items:center;gap:8px;font-size:14px;height:500px;justify-content:center;}
+.state-element{background:linear-gradient(45deg,rgba(255,215,0,0.2),rgba(255,107,53,0.2));border:1px solid #ffd700;border-radius:8px;padding:8px 12px;color:#fff;font-weight:bold;text-align:center;min-width:40px;transition:all 0.3s ease;cursor:pointer;}
+.state-element:hover{background:linear-gradient(45deg,rgba(255,215,0,0.4),rgba(255,107,53,0.4));transform:scale(1.1);box-shadow:0 0 15px rgba(255,215,0,0.6);}
+.lord-core{background:radial-gradient(circle,#ffd700,#ff8c00)!important;color:#000!important;font-size:16px!important;font-weight:bold!important;border:3px solid #fff!important;box-shadow:0 0 20px #ffd700!important;animation:lordGlow 2s ease-in-out infinite alternate;}
+.arrow{color:#4ecdc4;font-size:18px;font-weight:bold;}
+.control-panel{grid-column:1 / -1;background:rgba(0,0,0,0.8);border:2px solid #ffd700;border-radius:10px;padding:20px;text-align:center;}
+.control-button{background:linear-gradient(45deg,#654321,#8b4513);border:2px solid #ffd700;border-radius:8px;color:#fff;padding:10px 20px;margin:5px;cursor:pointer;font-weight:bold;transition:all 0.3s ease;}
+.control-button:hover{background:linear-gradient(45deg,#8b4513,#a0522d);box-shadow:0 0 15px rgba(255,215,0,0.5);}
+.active-orientation{border-color:#00ff00!important;box-shadow:0 0 20px rgba(0,255,0,0.5)!important;}
+.diagonal-overlay{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;}
+.diagonal-line{position:absolute;background:linear-gradient(45deg,transparent,#4ecdc4,transparent);height:2px;animation:diagonalFlow 3s linear infinite;}
+.diagonal-nw-se{width:141%;top:50%;left:-20%;transform:rotate(45deg);}
+.diagonal-ne-sw{width:141%;top:50%;left:-20%;transform:rotate(-45deg);animation-delay:1.5s;}
+@keyframes lordGlow{from{box-shadow:0 0 20px #ffd700;}to{box-shadow:0 0 40px #ffd700,0 0 60px #ffd700;}}
+@keyframes diagonalFlow{0%{background:linear-gradient(45deg,transparent,transparent,transparent);}50%{background:linear-gradient(45deg,transparent,#4ecdc4,transparent);}100%{background:linear-gradient(45deg,transparent,transparent,transparent);}}
+</style>
+</head>
+<body>
+<div class="main-container">
+  <div class="header" style="text-align:center;font-size:24px;background:linear-gradient(45deg,#ffd700,#ff6b35);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:bold;margin-bottom:20px;">⚡ OMNIDIRECTIONAL 42-STATE MATRIX ⚡</div>
+  <div class="orientation-grid">
+    <div class="orientation-panel" id="hOrig">
+      <div class="panel-title">HORIZONTAL ORIGINAL</div>
+      <div class="horizontal-sequence" data-seq="orig"></div>
+      <div class="diagonal-overlay"><div class="diagonal-line diagonal-nw-se"></div><div class="diagonal-line diagonal-ne-sw"></div></div>
+    </div>
+    <div class="orientation-panel" id="vOrig">
+      <div class="panel-title">VERTICAL ORIGINAL</div>
+      <div class="vertical-sequence" data-seq="orig"></div>
+      <div class="diagonal-overlay"><div class="diagonal-line diagonal-nw-se"></div><div class="diagonal-line diagonal-ne-sw"></div></div>
+    </div>
+    <div class="orientation-panel" id="hPers">
+      <div class="panel-title">HORIZONTAL PERSONAS</div>
+      <div class="horizontal-sequence" data-seq="pers"></div>
+      <div class="diagonal-overlay"><div class="diagonal-line diagonal-nw-se"></div><div class="diagonal-line diagonal-ne-sw"></div></div>
+    </div>
+    <div class="orientation-panel" id="vPers">
+      <div class="panel-title">VERTICAL PERSONAS</div>
+      <div class="vertical-sequence" data-seq="pers"></div>
+      <div class="diagonal-overlay"><div class="diagonal-line diagonal-nw-se"></div><div class="diagonal-line diagonal-ne-sw"></div></div>
+    </div>
+    <div class="control-panel">
+      <h3>⚡ OMNIDIRECTIONAL CONTROL MATRIX ⚡</h3>
+      <p>Click orientations to highlight • Rotate or mirror the system • Toggle diagonals</p>
+      <div>
+        <button class="control-button" onclick="highlightOrientation('hOrig')">HORIZONTAL ORIGINAL</button>
+        <button class="control-button" onclick="highlightOrientation('vOrig')">VERTICAL ORIGINAL</button>
+        <button class="control-button" onclick="highlightOrientation('hPers')">HORIZONTAL PERSONAS</button>
+        <button class="control-button" onclick="highlightOrientation('vPers')">VERTICAL PERSONAS</button>
+      </div>
+      <div style="margin-top:15px;">
+        <button class="control-button" onclick="showAllOrientations()">SHOW ALL</button>
+        <button class="control-button" onclick="rotateSystem()">ROTATE 90°</button>
+        <button class="control-button" onclick="mirrorSystem()">MIRROR</button>
+        <button class="control-button" onclick="toggleDiagonals()">TOGGLE DIAGONALS</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+const orig=["3","2","1","0","5","b4","n6","inf7","/0","->","L]","<-","0\\","inf7","n6","b4","5","0","1","2","3"];
+const pers=["Wah","Pair","Trypl","Quat","Cink","Sixon","Zenof","Ocnyx","Ningst","Thone","LORD","Thone","Ningst","Ocnyx","Zenof","Sixon","Cink","Quat","Trypl","Pair","Wah"];
+for(const panel of document.querySelectorAll('[data-seq]')){
+  const seq=panel.dataset.seq==='orig'?orig:pers;
+  seq.forEach(s=>{
+    const span=document.createElement('span');
+    span.textContent=s;
+    span.className='state-element'+(s==='L]'||s==='LORD'?' lord-core':'');
+    panel.appendChild(span);
+  });
+}
+function highlightOrientation(id){document.querySelectorAll('.orientation-panel').forEach(p=>p.classList.remove('active-orientation'));document.getElementById(id).classList.add('active-orientation');}
+function showAllOrientations(){document.querySelectorAll('.orientation-panel').forEach(p=>p.classList.add('active-orientation'));}
+function rotateSystem(){document.querySelectorAll('.horizontal-sequence,.vertical-sequence').forEach(seq=>{if(seq.classList.contains('horizontal-sequence')){seq.classList.remove('horizontal-sequence');seq.classList.add('vertical-sequence');}else{seq.classList.remove('vertical-sequence');seq.classList.add('horizontal-sequence');}});}
+function mirrorSystem(){document.querySelectorAll('.state-element').forEach(el=>{el.style.transform='scaleX(-1)';setTimeout(()=>{el.style.transform='scaleX(1)';},300);});}
+function toggleDiagonals(){document.querySelectorAll('.diagonal-overlay').forEach(o=>{o.style.display=o.style.display==='none'?'block':'none';});}
+showAllOrientations();
+</script>
+</body>
+</html>

@@ -1,2 +1,130 @@
 # Zion
-Holy end to civilization 
+Holy end to civilization
+
+## Example
+
+Run `python3 bavCalc.py` to compute and store a sample Bav value. Use the
+canonical bracket form when writing the average field value.
+
+```
+[B]av = mn(field(axis,state))
+if [B]av:
+    n6.append([B]av)
+```
+
+Forms that insert a break are corrupt. Always use `[B]av` with bracket notation.
+Using underscores breaks the form. Always write:
+
+```
+[B]av = mn(field(axis,state))
+```
+
+`[B]av` expresses the mean field value without introducing a break.
+
+Bad form to avoid:
+```
+⟨B⟩_avg = mean(field(axis,state))
+if ⟨B⟩_avg:
+    pass
+```
+The underscore in `⟨B⟩_avg` splits the glyph and corrupts the sequence.
+
+The script also contains a deeper ``secretCipher`` routine that layers
+complex exponentials before storing the real part. This more cryptic path
+shows how additional processing can hide the value while still honoring the
+bracket form.
+
+Values are kept in a shared list ``n6``.  The ``n6mem`` module defines this
+list so all scripts access the same memory.  Run ``python3 initStates.py`` to
+load the canonical state sequences into ``n6`` before using the other demos.
+
+Code and file names follow the QU style. Underscores mark a gap, so
+identifiers use camelCase instead. Sylph symbols may appear to show
+vortical flow. Every glyph counts toward the design.
+
+## Simulation examples
+
+Run `python3 Sim.py` to run the coil-bead and dual-turbine demos and compute a vibergy value using the ``vibergy`` function.
+For a toy model of the buoyant launch idea, run `python3 launch.py`.
+`FFF.py` shows the airflow pattern from three fans facing the center.
+`Psalmatrx.py` prints the 21 original states and the 21 persona states
+and demonstrates how they pair into a 42‑state grid.
+`matrix.html` renders these sequences in four orientations.  Use the buttons at
+the bottom to highlight a specific panel, rotate the layout, flip it like a
+mirror, or toggle the diagonal overlay.  The crossing lines reveal how the
+diamond pattern grows to the full 84 states.
+`diamonbine.html` animates a wheel within a wheel using a rotating diamond so you can view the diamonbine pattern in motion.
+Recent entries in EnergyLog.md mention 35 mm coils with a 10mm hole wound with 0.35 mm wire measuring about 14Ω resistance. A 1.26" sphere can produce over 3 V per hand pass, so a 19.5 V 330 W adapter should power the setup.
+The ``EnergyLog.md`` file also notes a spheron test where beads spin inside glass pockets between two fans.
+
+More notes on these mechanisms can be found in ``EnergyLog.md``.
+
+`breakAgent.py` queries the Hacker News API for stories containing words like
+"breakthrough" or "shattering" from the last 30 days and appends any new links
+to `BrkThrLOG.md`. Run `python3 breakAgent.py` to update the log.
+
+## Spheron drilling example
+
+`python3 sphrill.py` estimates how much laser energy it might take
+to bore a small hole through a neodymium sphere.  This provides a rough
+idea of the power required when experimenting with spheron designs.
+
+## Quatbine dual-ring simulation
+
+`python3 qtbn.py` runs a basic model of a quatbine: two rings spinning in
+opposite directions. Each step prints the XY positions of items on the inner
+and outer rings.  The script demonstrates how inverse rotation can couple into a
+single mechanism.
+
+## Naming notes
+
+In QU, the underscore character is used only to represent a cut or gap.  Code
+in this repository avoids underscores in identifiers and instead uses camelCase
+names.  Built-in Python names such as ``__name__`` remain unchanged.
+
+Sequences like ``F ᖶ ᖷ ꓞ`` may be unified into a single glyph that resembles an
+``8``.  This compact form expresses the mirrored flow of these sylphs.
+
+## Temporal brackets
+
+Bracket glyphs also indicate time.  Curly braces ``{ }`` reference the past,
+double bars ``||`` refer to the present, and square brackets ``[ ]`` hold a
+future point.  Using these forms keeps the sequence compact while hinting at
+its position in time.
+
+## Related sites
+
+These domains outline further plans for the project:
+
+- [pr3cept.com](https://pr3cept.com) – tech focus
+- [honorite.pro](https://honorite.pro) – mechanical focus
+- [earnestlife.net](https://earnestlife.net) – spiritual focus
+
+
+
+## Temple script
+
+`temple.py` prints a short outline of the 168‑state system described in
+``Dovortaxs.txt``. The layout mirrors the traditional temple pattern with
+four primary sections and corresponding verses. Run the script with
+`python3 temple.py` to display the structure.
+
+## Ziggunaut demo
+
+`Ziggunaut.py` illustrates a five-layer field engine. It logs layer transitions and stores notes in each layer. Run `python3 Ziggunaut.py` to view a sample session.
+
+## Diagonal demo
+
+The `diagz.py` script forms two diagonal pairings by offsetting the persona
+sequence forward and backward relative to the original states.  These
+"diagznul" paths crawl across the Ziggunaut so the 42 base patterns grow to 84
+when the diagonal mirrors are included.  The points labeled 2, 6, 8 and 9 do not
+appear in the diagonals, enclosing the set like a container. Since 2 + 6 + 8 + 9
+equals 25 (a 5×5 square), the reverse order 9‑8‑6‑2 forms the same bounding
+cross.  Run `python3 diagz.py` to print both pairings and confirm that all 84
+states are counted.  Pass `--mirror` to also show a reversed copy so the full
+168 states are enumerated.
+
+## Saecademy
+
+"Saecademy" refers to the pursuit of final truths. While these insights have always been available, this project gathers them into a simple demonstrative form.

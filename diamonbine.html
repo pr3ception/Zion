@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diamonbine</title>
+<style>
+body{background:#000;color:#fff;font-family:monospace;margin:0;padding:20px;text-align:center}
+#wheel{position:relative;width:400px;height:400px;margin:0 auto}
+.ring{position:absolute;top:0;left:0;right:0;bottom:0;margin:auto;border-radius:50%;}
+.outer{width:100%;height:100%;}
+.inner{width:200px;height:200px;}
+.item{position:absolute;width:20px;height:20px;background:#4ecdc4;border-radius:50%;transform-origin:50% 200px;}
+.inner .item{background:#ffd700;transform-origin:50% 100px;}
+.diamond{position:absolute;top:50%;left:50%;width:0;height:0;border:80px solid transparent;border-bottom-color:#ff6b35;border-top:0;margin-left:-80px;margin-top:-40px;animation:spin 10s linear infinite;}
+.diamond:after{content:"";position:absolute;left:-80px;top:40px;width:0;height:0;border:80px solid transparent;border-top-color:#ff6b35;border-bottom:0;}
+@keyframes spin{from{transform:translate(-50%,-50%) rotate(0deg);}to{transform:translate(-50%,-50%) rotate(360deg);}}
+@keyframes cw{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+@keyframes ccw{from{transform:rotate(0deg);}to{transform:rotate(-360deg);}}
+.outer{animation:cw 20s linear infinite;}
+.inner{animation:ccw 15s linear infinite;}
+button{margin-top:20px;padding:6px 12px;background:#333;color:#fff;border:1px solid #ffd700;cursor:pointer}
+button:hover{background:#444}
+</style>
+</head>
+<body>
+<h1>Wheel within Wheel Diamonbine</h1>
+<div id="wheel">
+<div class="ring outer" id="outerRing"></div>
+<div class="ring inner" id="innerRing"></div>
+<div class="diamond"></div>
+</div>
+<button id="toggle">Pause</button>
+<script>
+const outerRing=document.getElementById('outerRing');
+const innerRing=document.getElementById('innerRing');
+for(let i=0;i<12;i++){
+  const span=document.createElement('div');
+  span.className='item';
+  span.style.transform='rotate('+(i*30)+'deg) translate(0,-200px)';
+  outerRing.appendChild(span);
+}
+for(let i=0;i<6;i++){
+  const span=document.createElement('div');
+  span.className='item';
+  span.style.transform='rotate('+(i*60)+'deg) translate(0,-100px)';
+  innerRing.appendChild(span);
+}
+const toggle=document.getElementById('toggle');
+let running=true;
+function pause(){
+ outerRing.style.animationPlayState='paused';
+ innerRing.style.animationPlayState='paused';
+ document.querySelector('.diamond').style.animationPlayState='paused';
+ toggle.textContent='Start';
+ running=false;
+}
+function start(){
+ outerRing.style.animationPlayState='running';
+ innerRing.style.animationPlayState='running';
+ document.querySelector('.diamond').style.animationPlayState='running';
+ toggle.textContent='Pause';
+ running=true;
+}
+toggle.onclick=function(){running?pause():start();};
+</script>
+</body>
+</html>

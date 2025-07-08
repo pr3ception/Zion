@@ -21,6 +21,14 @@ Using underscores breaks the form. Always write:
 
 `[B]av` expresses the mean field value without introducing a break.
 
+Bad form to avoid:
+```
+⟨B⟩_avg = mean(field(axis,state))
+if ⟨B⟩_avg:
+    pass
+```
+The underscore in `⟨B⟩_avg` splits the glyph and corrupts the sequence.
+
 The script also contains a deeper ``secretCipher`` routine that layers
 complex exponentials before storing the real part. This more cryptic path
 shows how additional processing can hide the value while still honoring the
